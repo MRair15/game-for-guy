@@ -55,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject shadow;
     public GameObject swords;
 
+    public DeathScreenController deathScreen;
+
     // -----------------------------------
 
     Rigidbody2D rb;
@@ -301,6 +303,8 @@ public class PlayerMovement : MonoBehaviour
                     sr.flipX = false;
 
                 Destroy(shadow);
+                DeathScreenController.Show();      // или DeathScreenController.Show(3.5f);
+
 
         }
     }
